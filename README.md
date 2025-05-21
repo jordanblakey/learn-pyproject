@@ -5,6 +5,9 @@ Experiments with modern python project tooling.
 https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
 https://python-poetry.org/docs
 
+### PyPi Project Page
+http://pypi.org/project/learn-pyproject/0.1.1/
+
 ### Install Poetry
 
 ```sh
@@ -48,10 +51,17 @@ poetry install --with test
 poetry install --without test,docs
 # explicitly select groups to install
 poetry install --only main # runtime deps are implicitly named main
-poetry build
-poetry publish
 poetry show --tree
 poetry show --all
 ```
 
 ### [Libraries](https://python-poetry.org/docs/libraries/)
+
+```sh
+poetry build # sdist (source, .tar.gz), wheel (compiled, .whl)
+poetry publish # requires .pypirc credentials, see https://python-poetry.org/docs/repositories/#configuring-credentials
+poetry config pypi-token.pypi <token>
+poetry publish --build # note published versions are immutable. You have to change the version number to publish again. Use semver.
+```
+
+### [Commands](https://python-poetry.org/docs/cli/)
