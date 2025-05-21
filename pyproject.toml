@@ -13,6 +13,17 @@ dependencies = ["pendulum (>=3.1.0,<4.0.0)"]
 package-mode = true
 packages = [{ include = "learn_pyproject", from = "src" }]
 
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+mkdocs = "^1.6.1"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
