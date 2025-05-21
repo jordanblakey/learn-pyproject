@@ -2,13 +2,15 @@
 
 Experiments with modern python project tooling.
 
-https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
-https://python-poetry.org/docs
+<https://packaging.python.org/en/latest/guides/writing-pyproject-toml/>
+<https://python-poetry.org/docs>
 
-### PyPi Project Page
-http://pypi.org/project/learn-pyproject/0.1.1/
+## PyPi Project
 
-### Install Poetry
+<https://pypi.org/manage/account/>
+<http://pypi.org/project/learn-pyproject/0.1.1/>
+
+## Install Poetry
 
 ```sh
 curl -sSL https://install.python-poetry.org | python3 -
@@ -32,7 +34,7 @@ poetry env remove $(poetry env list | grep Activated | awk '{ print $1 }')
 poetry run python src/learn_pyproject/hello.py
 ```
 
-### [Managing Dependencies](https://python-poetry.org/docs/managing-dependencies/)
+## [Managing Dependencies](https://python-poetry.org/docs/managing-dependencies/)
 
 ```sh
 # discard lockfile and resolve dependencies again
@@ -55,7 +57,7 @@ poetry show --tree
 poetry show --all
 ```
 
-### [Libraries](https://python-poetry.org/docs/libraries/)
+## [Libraries](https://python-poetry.org/docs/libraries/)
 
 ```sh
 poetry build # sdist (source, .tar.gz), wheel (compiled, .whl)
@@ -64,4 +66,4 @@ poetry config pypi-token.pypi <token>
 poetry publish --build # note published versions are immutable. You have to change the version number to publish again. Use semver.
 ```
 
-### [Commands](https://python-poetry.org/docs/cli/)
+## [Commands](https://python-poetry.org/docs/cli/)
